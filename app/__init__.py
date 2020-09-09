@@ -1,6 +1,4 @@
 from flask import Flask
-from config import Config
-
 app = Flask(__name__)
 
 # 倒入配置文件
