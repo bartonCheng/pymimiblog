@@ -352,6 +352,7 @@
                     type="button"
                     onclick="sub()"
                     class="btn btn-success btn-lg btn-block"
+                    id="button01"
                   >
                     <i class="fa">搜索</i>
                   </button>
@@ -415,7 +416,7 @@
                     }
                   }
                   var a = document.getElementById("sos");
-                  var btn = document.getElementById("button");
+                  var btn = document.getElementById("button01");
                   btn.onclick = function () {
                     var reg = /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/;
                     if (!reg.test(a.value)) {
