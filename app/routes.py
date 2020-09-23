@@ -18,6 +18,10 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
+    # 获取ip地址
+    ip = request.remote_addr
+    print(ip)
+    # 判断设备类型
     is_mobile = judge_pc_or_mobile(request.headers.get('User-Agent'))
     if is_mobile == True:
         return render_template('app.html', title='Home', user=user, posts=posts)
