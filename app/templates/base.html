@@ -28,12 +28,11 @@
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand">Navbar</a>
       <form class="form-inline">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" onclick="javascript:addFavorite()"
+          type="submit">加入收藏</button>
       </form>
     </nav>
-    <div class="row">
+    <div class="row" style="margin: 12px;">
     </div>
     <div class="row">
       <!-- 播放器 -->
@@ -91,11 +90,6 @@
             onClick="btn_jiexi_new()">
             New-点击全屏解析
           </button>
-
-          <a href="#" rel="sidebar" onclick="javascript:addFavorite()"><button id="bf" type="button"
-              class="btn btn-success btn-lg btn-block" style="margin-top: 5px">
-              加入收藏
-            </button></a>
         </div>
       </div>
     </div>
