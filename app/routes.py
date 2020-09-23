@@ -17,7 +17,7 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    print(request.args)
+    print(request.headers.get('User-Agent'))
     return render_template('index.html', title='Home', user=user, posts=posts)
 
 
