@@ -19,8 +19,10 @@ def index():
         }
     ]
     is_mobile = judge_pc_or_mobile(request.headers.get('User-Agent'))
-    print(is_mobile)
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    if is_mobile == True:
+        return render_template('app.html', title='Home', user=user, posts=posts)
+    else:
+        return render_template('index.html', title='Home', user=user, posts=posts)
 
 
 @app.route('/login', methods=['GET', 'POST'])
