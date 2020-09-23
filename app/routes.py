@@ -19,7 +19,7 @@ def index():
     ]
     # 获取ip地址
     ip = request.remote_addr
-    print(ip)
+    print(jsonify({'ip': request.environ.get('HTTP_X_REAL_IP', request.remote_addr)}))
     # 判断设备类型
     is_mobile = judge_pc_or_mobile(request.headers.get('User-Agent'))
     if is_mobile == True:
