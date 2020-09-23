@@ -3,6 +3,7 @@ from app import app
 from app.forms import LoginForm
 import re
 
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -17,7 +18,8 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    print(request.headers.get('User-Agent'))
+    is_mobile = judge_pc_or_mobile(request.headers.get('User-Agent'))
+    print(is_mobile)
     return render_template('index.html', title='Home', user=user, posts=posts)
 
 
