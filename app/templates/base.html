@@ -50,7 +50,7 @@
       <form method="get" id="1233911832"></form>
       <div class="input-group" style="width: 100%">
         <span class="input-group-addon input-lg" style="width: 80px">选择接口</span>
-        <select class="form-control input-lg" id="jk">
+        <select class="form-control input-lg" id="jiekou">
           <option value="http://jx.du2.cc/?url=" selected="">
             ⑤号通用vip引擎系统【全网解析】
           </option>
@@ -101,19 +101,16 @@
 
   <script type="text/javascript">
     function dihejk() {
+      // 获取需要解析的地址
       var diz = document.getElementById("video-url").value;
-      console.log(diz);
-      i = diz.indexOf("v_19rwv8gaio");
-      if (i != -1) {
-        window.href = "http://qmaile.com";
-        return false;
-      }
-      var jkurl = document.getElementById("jk");
-      var jk = document.getElementById("jk").selectedIndex;
+      // 获取接口url
+      var jkurl = document.getElementById("jiekou");
+      var jk = document.getElementById("jiekou").selectedIndex;
       var jkv = jkurl.options[jk].value;
+      // 获取播放器
       var cljurl = document.getElementById("player");
+      // 拼接赋值
       cljurl.src = jkv + diz;
-      console.log(cljurl);
     }
 
     function dihejk2() {
