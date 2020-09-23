@@ -124,6 +124,38 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    function dihejk() {
+      var diz = document.getElementById("url").value;
+      console.log(diz);
+      i = diz.indexOf("v_19rwv8gaio");
+      if (i != -1) {
+        window.href = "http://qmaile.com";
+        return false;
+      }
+      var jkurl = document.getElementById("jk");
+      var jk = document.getElementById("jk").selectedIndex;
+      var jkv = jkurl.options[jk].value;
+      var cljurl = document.getElementById("player");
+      cljurl.src = jkv + diz;
+      console.log(cljurl);
+    }
+
+    function dihejk2() {
+      var diz = document.getElementById("url").value;
+      i = diz.indexOf("v_19rwv8gaio");
+      if (i != -1) {
+        window.href = "http://qmaile.com";
+        return false;
+      }
+      var jkurl = document.getElementById("jk");
+      var jk = document.getElementById("jk").selectedIndex;
+      var jkv = jkurl.options[jk].value;
+      var cljurl = document.getElementById("player");
+      window.open(jkv + diz, "_blank");
+    }
+  </script>
 </body>
 
 </html>
