@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, requested
+from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app.forms import LoginForm
 import re
@@ -17,7 +17,7 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    print(requested)
+    print(request)
     return render_template('index.html', title='Home', user=user, posts=posts)
 
 
