@@ -29,3 +29,7 @@ def login():
     return render_template('login.html',
         title = 'Sign In',
         form = form)
+
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html', title='欢迎...')
