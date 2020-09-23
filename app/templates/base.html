@@ -82,16 +82,16 @@
       </div>
       <br />
       <div>
-        <button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onClick="dihejk()">
+        <button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onClick="btn_jiexi()">
           Go-点击开始解析
         </button>
 
         <button id="bf" style="margin-top: 5px" type="button" class="btn btn-success btn-lg btn-block hidden-xs"
-          onClick="dihejk2()">
+          onClick="btn_jiexi_new()">
           New-点击全屏解析
         </button>
 
-        <a href="#" rel="sidebar" onclick="javascript:addFavorite22()"><button id="bf" type="button"
+        <a href="#" rel="sidebar" onclick="javascript:addFavorite()"><button id="bf" type="button"
             class="btn btn-success btn-lg btn-block" style="margin-top: 5px">
             加入收藏
           </button></a>
@@ -100,7 +100,7 @@
   </div>
 
   <script type="text/javascript">
-    function dihejk() {
+    function btn_jiexi() {
       // 获取需要解析的地址
       var diz = document.getElementById("video-url").value;
       // 获取接口url
@@ -113,18 +113,37 @@
       cljurl.src = jkv + diz;
     }
 
-    function dihejk2() {
-      var diz = document.getElementById("url").value;
-      i = diz.indexOf("v_19rwv8gaio");
-      if (i != -1) {
-        window.href = "http://qmaile.com";
-        return false;
-      }
-      var jkurl = document.getElementById("jk");
-      var jk = document.getElementById("jk").selectedIndex;
+    function btn_jiexi_new() {
+      // 获取需要解析的地址
+      var diz = document.getElementById("video-url").value;
+      // 获取接口url
+      var jkurl = document.getElementById("jiekou");
+      var jk = document.getElementById("jiekou").selectedIndex;
       var jkv = jkurl.options[jk].value;
+      // 获取播放器
       var cljurl = document.getElementById("player");
-      window.open(jkv + diz, "_blank");
+      window.open(cljurl, "_blank");
+    }
+
+    function addFavorite() {
+      var url = window.location;
+      var title = document.title;
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("360se") > -1) {
+        alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+      } else if (ua.indexOf("msie 8") > -1) {
+        window.external.AddToFavoritesBar(url, title); //IE8
+      } else if (document.all) {
+        try {
+          window.external.addFavorite(url, title);
+        } catch (e) {
+          alert("您的浏览器不支持,请按 Ctrl+D 手动收藏!");
+        }
+      } else if (window.sidebar) {
+        window.sidebar.addPanel(title, url, "");
+      } else {
+        alert("您的浏览器不支持,请按 Ctrl+D 手动收藏!");
+      }
     }
   </script>
 </body>
