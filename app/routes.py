@@ -32,4 +32,6 @@ def login():
 
 @app.route('/welcome')
 def welcome():
+    name = request.args.get('name')
+    return jsonify(dict(data=name))
     return render_template('welcome.html', title='欢迎...')
