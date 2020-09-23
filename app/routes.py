@@ -2,9 +2,6 @@ from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app.forms import LoginForm
 import re
-from werkzeug.middleware.proxy_fix import ProxyFix
-
-app.wsgi_app = ProxyFix(app.wsgi_app, num_proxies=1)
 
 @app.route('/')
 @app.route('/index')
