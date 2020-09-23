@@ -77,7 +77,7 @@
 
         <div class="input-group" style="width: 80%">
           <span style="margin-right: 20px;">播放地址</span>
-          <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址"  id="video-url" />
+          <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="video-url" />
         </div>
         <br />
         <div>
@@ -140,6 +140,15 @@
       }
     }
   </script>
+
+  <script>
+    if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i))) {
+      document.write("手机访问.");
+    } else {
+      document.write("电脑访问.");
+    }
+  </script>
+
 </body>
 
 </html>
