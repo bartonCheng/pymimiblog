@@ -25,80 +25,80 @@
 
 <body background="/static/img/bj.png">
   <div class="container">
+    <div class="row">
+      <!-- 头部广告 -->
+      <h3 class="text-muted" align="center">人人视频在线解析</h3>
+      <p style="letter-spacing: 1px; text-align: center">
+        <span style="color: #7f7f7f">免费全网影视VIP视频vip会员免广告看电影！
+          若播放异常，刷新，更换接口尝试哦！
+        </span>
+      </p>
 
-    <!-- 头部广告 -->
-    <h3 class="text-muted" align="center">人人视频在线解析</h3>
-    <p style="letter-spacing: 1px; text-align: center">
-      <span style="color: #7f7f7f">免费全网影视VIP视频vip会员免广告看电影！
-        若播放异常，刷新，更换接口尝试哦！
-      </span>
-    </p>
 
+      <!-- 播放器 -->
+      <div class="col-8 col">
+        <div class="panel panel-default">
+          <div id="kj" class="panel-body">
+            <iframe src="/static/img/bgimg004.jpg" id="player" width="100%" height="630px" allowTransparency="true"
+              allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
 
-    <!-- 播放器 -->
-    <div class="align-items-center">
-      <div class="panel panel-default">
-        <div id="kj" class="panel-body">
-          <iframe src="/static/img/bgimg004.jpg" id="player" width="100%" height="630px" allowTransparency="true"
-            allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
+      <!-- 选项卡 -->
+      <div class="col-4 col">
+        <form method="get" id="1233911832"></form>
+        <div class="input-group" style="width: 100%">
+          <span class="input-group-addon input-lg" style="width: 80px">选择接口</span>
+          <select class="form-control input-lg" id="jiekou">
+            <option value="http://jx.du2.cc/?url=" selected="">
+              ⑤号通用vip引擎系统【全网解析】
+            </option>
+            <option value="http://jx.drgxj.com/?url=" selected="">
+              ④号通用vip引擎系统【超级稳定通用】
+            </option>
+            <option value="http://jx.618ge.com/?url=" selected="">
+              ③号通用vip引擎系统【稳定通用】
+            </option>
+            <option value="http://vip.jlsprh.com/?url=" selected="">
+              ②号通用vip引擎系统【稳定通用】
+            </option>
+            <option value="http://jx.drgxj.com/?url=" selected="">
+              <span style="color: red">无广告超速解析</span>【通用】
+            </option>
+            <option value="http://jx.598110.com/?url=" selected="">
+              ①号通用vip引擎系统【稳定通用】
+            </option>
+            <option value="https://jx.idc126.net/jx/?url=" selected="">
+              vip超清视频解析【全网vip解析】
+            </option>
+          </select>
+        </div>
+        <br />
+
+        <div class="input-group" style="width: 100%">
+          <span class="input-group-addon input-lg" style="width: 80px">播放地址</span>
+          <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="video-url" />
+        </div>
+        <br />
+        <div>
+          <button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onClick="btn_jiexi()">
+            Go-点击开始解析
+          </button>
+
+          <button id="bf" style="margin-top: 5px" type="button" class="btn btn-success btn-lg btn-block hidden-xs"
+            onClick="btn_jiexi_new()">
+            New-点击全屏解析
+          </button>
+
+          <a href="#" rel="sidebar" onclick="javascript:addFavorite()"><button id="bf" type="button"
+              class="btn btn-success btn-lg btn-block" style="margin-top: 5px">
+              加入收藏
+            </button></a>
         </div>
       </div>
     </div>
-
-    <!-- 选项卡 -->
-    <div class="col-md-14 column">
-      <form method="get" id="1233911832"></form>
-      <div class="input-group" style="width: 100%">
-        <span class="input-group-addon input-lg" style="width: 80px">选择接口</span>
-        <select class="form-control input-lg" id="jiekou">
-          <option value="http://jx.du2.cc/?url=" selected="">
-            ⑤号通用vip引擎系统【全网解析】
-          </option>
-          <option value="http://jx.drgxj.com/?url=" selected="">
-            ④号通用vip引擎系统【超级稳定通用】
-          </option>
-          <option value="http://jx.618ge.com/?url=" selected="">
-            ③号通用vip引擎系统【稳定通用】
-          </option>
-          <option value="http://vip.jlsprh.com/?url=" selected="">
-            ②号通用vip引擎系统【稳定通用】
-          </option>
-          <option value="http://jx.drgxj.com/?url=" selected="">
-            <span style="color: red">无广告超速解析</span>【通用】
-          </option>
-          <option value="http://jx.598110.com/?url=" selected="">
-            ①号通用vip引擎系统【稳定通用】
-          </option>
-          <option value="https://jx.idc126.net/jx/?url=" selected="">
-            vip超清视频解析【全网vip解析】
-          </option>
-        </select>
-      </div>
-      <br />
-
-      <div class="input-group" style="width: 100%">
-        <span class="input-group-addon input-lg" style="width: 80px">播放地址</span>
-        <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="video-url" />
-      </div>
-      <br />
-      <div>
-        <button id="bf" type="button" class="btn btn-success btn-lg btn-block hidden-xs" onClick="btn_jiexi()">
-          Go-点击开始解析
-        </button>
-
-        <button id="bf" style="margin-top: 5px" type="button" class="btn btn-success btn-lg btn-block hidden-xs"
-          onClick="btn_jiexi_new()">
-          New-点击全屏解析
-        </button>
-
-        <a href="#" rel="sidebar" onclick="javascript:addFavorite()"><button id="bf" type="button"
-            class="btn btn-success btn-lg btn-block" style="margin-top: 5px">
-            加入收藏
-          </button></a>
-      </div>
-    </div>
   </div>
-
   <script type="text/javascript">
     function btn_jiexi() {
       // 获取需要解析的地址
