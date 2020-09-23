@@ -78,7 +78,7 @@
 
       <div class="input-group" style="width: 100%">
         <span class="input-group-addon input-lg" style="width: 80px">播放地址</span>
-        <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="url" />
+        <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="video-url" />
       </div>
       <br />
       <div>
@@ -91,14 +91,6 @@
           New-点击全屏解析
         </button>
 
-        <button id="bf" type="button" class="btn btn-success btn-lg btn-block visible-xs" onClick="dihejk()">
-          点击解析
-        </button>
-
-        <button id="bf" type="button" class="btn btn-success btn-lg btn-block visible-xs" onClick="dihejk2()">
-          点击全屏解析
-        </button>
-
         <a href="#" rel="sidebar" onclick="javascript:addFavorite22()"><button id="bf" type="button"
             class="btn btn-success btn-lg btn-block" style="margin-top: 5px">
             加入收藏
@@ -109,7 +101,7 @@
 
   <script type="text/javascript">
     function dihejk() {
-      var diz = document.getElementById("url").value;
+      var diz = document.getElementById("video-url").value;
       console.log(diz);
       i = diz.indexOf("v_19rwv8gaio");
       if (i != -1) {
