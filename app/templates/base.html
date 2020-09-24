@@ -50,6 +50,11 @@
         <div class="input-group" style="width: 80%">
           <span style="margin-right: 20px;">选择接口</span>
           <select class="form-control" id="jiekou" style="width: 40px;">
+            {% for data in jiekou_data %}
+            <option value="{{ data.value }}" selected="">
+              {{data.title}}
+            </option>
+            {% endfor %}
             <option value="http://jx.du2.cc/?url=" selected="">
               ⑤号通用vip引擎系统【全网解析】
             </option>

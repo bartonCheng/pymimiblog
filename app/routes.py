@@ -5,19 +5,22 @@ import re
 from flask import jsonify
 
 
-
 @app.route('/')
 @app.route('/index')
 def index():
     user = {'username': 'Miguel'}
-    posts = [
+    jiekou_data = [
         {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'title': "⑤号通用vip引擎系统【全网解析】",
+            'value': 'http://jx.du2.cc/?url='
         },
         {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
+            'title': "⑤号通用vip引擎系统【全网解析】",
+            'value': 'http://jx.du2.cc/?url='
+        },
+        {
+            'title': "⑤号通用vip引擎系统【全网解析】",
+            'value': 'http://jx.du2.cc/?url='
         }
     ]
     # 获取ip地址
@@ -26,9 +29,9 @@ def index():
     # 判断设备类型
     is_mobile = judge_pc_or_mobile(request.headers.get('User-Agent'))
     if is_mobile == True:
-        return render_template('app.html', title='Home', user=user, posts=posts)
+        return render_template('app.html', title='Home', user=user, jiekou_data=jiekou_data)
     else:
-        return render_template('index.html', title='Home', user=user, posts=posts)
+        return render_template('index.html', title='Home', user=user, jiekou_data=jiekou_data)
 
 
 @app.route('/login', methods=['GET', 'POST'])
