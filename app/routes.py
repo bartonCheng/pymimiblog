@@ -11,12 +11,24 @@ def index():
     user = {'username': 'Miguel'}
     jiekou_data = [
         {
-            'title': "⑤号通用vip引擎系统【全网解析】",
-            'value': 'http://jx.du2.cc/?url='
+            'title': "vip超清视频解析【全网vip解析】",
+            'value': 'https://jx.idc126.net/jx/?url='
         },
         {
-            'title': "⑤号通用vip引擎系统【全网解析】",
-            'value': 'http://jx.du2.cc/?url='
+            'title': "①号通用vip引擎系统【稳定通用】",
+            'value': 'http://jx.598110.com/?url='
+        },
+        {
+            'title': "②号通用vip引擎系统【稳定通用】",
+            'value': 'http://vip.jlsprh.com/?url='
+        },
+        {
+            'title': "③号通用vip引擎系统【稳定通用】",
+            'value': 'http://jx.618ge.com/?url='
+        },
+        {
+            'title': "④号通用vip引擎系统【超级稳定通用】",
+            'value': 'http://jx.drgxj.com/?url='
         },
         {
             'title': "⑤号通用vip引擎系统【全网解析】",
