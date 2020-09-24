@@ -16,23 +16,23 @@ def index():
         },
         {
             'title': "①号通用vip引擎系统【稳定通用】",
-            'value': 'http://jx.598110.com/?url='
+            'value': 'https://jx.598110.com/?url='
         },
         {
             'title': "②号通用vip引擎系统【稳定通用】",
-            'value': 'http://vip.jlsprh.com/?url='
+            'value': 'https://vip.jlsprh.com/?url='
         },
         {
             'title': "③号通用vip引擎系统【稳定通用】",
-            'value': 'http://jx.618ge.com/?url='
+            'value': 'https://jx.618ge.com/?url='
         },
         {
             'title': "④号通用vip引擎系统【超级稳定通用】",
-            'value': 'http://jx.drgxj.com/?url='
+            'value': 'https://jx.drgxj.com/?url='
         },
         {
             'title': "⑤号通用vip引擎系统【全网解析】",
-            'value': 'http://jx.du2.cc/?url='
+            'value': 'https://jx.du2.cc/?url='
         }
     ]
     # 获取ip地址
