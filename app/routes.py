@@ -126,12 +126,12 @@ def admin():
             'domain': request.form['domain'],
         }
         if data['code'] == '123':
-            res = {
+            result = {
                 "content": {
                     "message": "hello"
                 }
             }
-            print(res)
-            return jsonify({'result': res})
+            print(result)
+            return jsonify(result)
         print(data)
     return jsonify({'tasks': tasks})
