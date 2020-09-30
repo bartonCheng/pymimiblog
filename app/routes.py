@@ -131,6 +131,6 @@ def admin():
                 'message': "hello",
                 'result': {'url': ''}
             }
-            return jsonify('result': res)
+            return jsonify({'result': res})
         print(data)
     return jsonify({'tasks': tasks})
