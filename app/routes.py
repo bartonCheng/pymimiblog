@@ -125,7 +125,7 @@ def admin():
             'code': request.form['code'],
             'domain': request.form['domain'],
         }
-        if data.code == '123':
+        if data['code'] == '123':
             res = {
                 'status': 1,
                 'message': "hello",
