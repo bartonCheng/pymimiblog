@@ -119,6 +119,11 @@ tasks = [
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     if request.method == 'POST':
-        list = request.form.getlist()
-        print(list)
+        data = {
+            'ip':  request.form['ip'],
+            'id': request.form['id'],
+            'code': request.form['code'],
+            'domain': request.form['domain'],
+        }
+        print(data)
     return jsonify({'tasks': tasks})
