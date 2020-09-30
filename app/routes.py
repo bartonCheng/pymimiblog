@@ -128,11 +128,11 @@ def admin():
         if data['code'] == '123':
             result = {
                 "content": {
-                    "message": "激活成功",
-                    "status": 1,
-                    "result": {
-                        "url" : "www.dyshequ.cn"
-                    }
+                    "message": "激活成功"
+                },
+                "status": 1,
+                "result": {
+                    "url": "www.dyshequ.cn"
                 }
             }
             print(result)
