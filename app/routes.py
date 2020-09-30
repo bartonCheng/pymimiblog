@@ -117,5 +117,5 @@ tasks = [
 
 
 @app.route('/admin', methods=['GET', 'POST'])
-def welcome():
+def admin():
     return jsonify({'tasks': tasks})
