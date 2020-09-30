@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from app import app
 from app.forms import LoginForm
 import re
@@ -95,3 +95,27 @@ def judge_pc_or_mobile(ua):
         is_mobile = True
 
     return is_mobile
+
+
+'''
+定义的 验证接口
+'''
+tasks = [
+    {
+        'id': 1,
+        'title': u'Buy groceries',
+        'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
+        'done': False
+    },
+    {
+        'id': 2,
+        'title': u'Learn Python',
+        'description': u'Need to find a good Python tutorial on the web',
+        'done': False
+    }
+]
+
+
+@app.route('/admin', methods=['GET', 'POST'])
+def welcome():
+    return jsonify({'tasks': tasks})
