@@ -137,5 +137,15 @@ def admin():
             }
             print(result)
             return jsonify(result)
-        print(data)
+        else:
+            result = {
+                "content": {
+                    "message": "请联系 QQ : 2996180203 激活"
+                },
+                "status": 0,
+                "result": {
+                    "url": "www.dyshequ.cn"
+                }
+            }
+            return jsonify(result)
     return jsonify({'tasks': tasks})
