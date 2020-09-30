@@ -118,10 +118,7 @@ tasks = [
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
-    datas = {
-        'ip' : request.json['ip'],
-        'id' : request.json['id'],
-        'code' : request.json['code'],
-        'domain' : request.json['domain']
-    }
-    return jsonify({'datas': datas})
+
+    data = request.get_json()
+    print(data)
+    return jsonify({'tasks': tasks})
