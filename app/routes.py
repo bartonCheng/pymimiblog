@@ -127,9 +127,9 @@ def admin():
         }
         if data['code'] == '123':
             res = {
-                'status': 1,
-                'message': "hello",
-                'result': {'url': ''}
+                "content": {
+                    "message": "hello"
+                }
             }
             print(res)
             return jsonify({'result': res})
