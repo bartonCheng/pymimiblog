@@ -126,6 +126,6 @@ def admin():
             'domain': request.form['domain'],
         }
         if data.code == '123':
-            return jsonify({'status': 1, 'message': "hello", 'result': ['url': '']})
+            return jsonify({'status': 1, 'message': "hello", 'result': ['url'=> '']})
         print(data)
     return jsonify({'tasks': tasks})
